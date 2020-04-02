@@ -12,7 +12,7 @@ export{};
 // reverse("The dog is big.") ➞ "The dog is big."
 // Notes
 
-function reverse(str: string): string {
+const reverse = (str):string => {
 	let str1: Array<string> = [];
 	let str2: Array<string> = str.split(' ');
 	for(let i = 0; i < str2.length; i++){
@@ -43,7 +43,7 @@ console.log(reverse("This is a typical sentence."));
 // helloWorld(15) ➞ "Hello World"
 
 
-function helloWorld(num: number): string{
+const helloWorld = (num: number): string =>{
 	if(num % 3 == 0 && num %5 == 0 ){
 		return "Hello World";
 	} else if(num % 5  == 0) {
@@ -71,7 +71,7 @@ console.log(helloWorld(15)); // ➞ "Hello World"
 
 // greaterThanOne("10/10") ➞ false
 
-function greaterThanOne(frac: string): boolean {
+const greaterThanOne = (frac: string): boolean => {
 	return eval(frac) > 1;	
 }
 
@@ -93,7 +93,7 @@ console.log(greaterThanOne("10/10"));//) ➞ false
 
 // getSumOfItems([-2, 84, 23]) ➞ 105
 
-function getSumOfItems(arr: Array<number>): number {
+const getSumOfItems = (arr: Array<number>): number => {
 	return arr.reduce((accum: number, cValue: number) => accum + cValue);	
 }
 
@@ -116,8 +116,7 @@ console.log(getSumOfItems([-2, 84, 23])); //]) ➞ 105
 
 // getMiddle("middle") ➞ "dd"
 
-function getMiddle(str: any): string {
-	console.log(str);
+const getMiddle = (str: any): string => {
 	if(str.length == 1){
 		return str
 	} else if (str.length % 2 == 1){

@@ -10,7 +10,7 @@ exports.__esModule = true;
 // reverse("This is a typical sentence.") ➞ "This is a lacipyt .ecnetnes"
 // reverse("The dog is big.") ➞ "The dog is big."
 // Notes
-function reverse(str) {
+var reverse = function (str) {
     var str1 = [];
     var str2 = str.split(' ');
     for (var i = 0; i < str2.length; i++) {
@@ -22,7 +22,7 @@ function reverse(str) {
         }
     }
     return str1.join(' ');
-}
+};
 console.log(reverse("This is a typical sentence."));
 // Hello; Hello World; World
 // Published by Matt in 
@@ -35,7 +35,7 @@ console.log(reverse("This is a typical sentence."));
 // helloWorld(3) ➞ "Hello"
 // helloWorld(5) ➞ "World"
 // helloWorld(15) ➞ "Hello World"
-function helloWorld(num) {
+var helloWorld = function (num) {
     if (num % 3 == 0 && num % 5 == 0) {
         return "Hello World";
     }
@@ -45,7 +45,7 @@ function helloWorld(num) {
     else if (num % 3 == 0) {
         return "Hello";
     }
-}
+};
 console.log(helloWorld(3)); //➞ "Hello"
 console.log(helloWorld(5)); //➞ "World"
 console.log(helloWorld(15)); // ➞ "Hello World"
@@ -58,9 +58,9 @@ console.log(helloWorld(15)); // ➞ "Hello World"
 // greaterThanOne("1/2") ➞ false
 // greaterThanOne("7/4") ➞ true
 // greaterThanOne("10/10") ➞ false
-function greaterThanOne(frac) {
+var greaterThanOne = function (frac) {
     return eval(frac) > 1;
-}
+};
 console.log(greaterThanOne("1/2")); //➞ false
 console.log(greaterThanOne("7/4")); //➞ true
 console.log(greaterThanOne("10/10")); //) ➞ false
@@ -73,9 +73,9 @@ console.log(greaterThanOne("10/10")); //) ➞ false
 // getSumOfItems([2, 7, 4]) ➞ 13
 // getSumOfItems([45, 3, 0]) ➞ 48
 // getSumOfItems([-2, 84, 23]) ➞ 105
-function getSumOfItems(arr) {
+var getSumOfItems = function (arr) {
     return arr.reduce(function (accum, cValue) { return accum + cValue; });
-}
+};
 console.log(getSumOfItems([2, 7, 4])); //➞ 13
 console.log(getSumOfItems([45, 3, 0])); // ➞ 48
 console.log(getSumOfItems([-2, 84, 23])); //]) ➞ 105
@@ -88,8 +88,7 @@ console.log(getSumOfItems([-2, 84, 23])); //]) ➞ 105
 // getMiddle("test") ➞ "es"
 // getMiddle("testing") ➞ "t"
 // getMiddle("middle") ➞ "dd"
-function getMiddle(str) {
-    console.log(str);
+var getMiddle = function (str) {
     if (str.length == 1) {
         return str;
     }
@@ -99,6 +98,6 @@ function getMiddle(str) {
     else {
         return str.substring((str.length / 2) - 1, (str.length / 2) + 1);
     }
-}
+};
 console.log(getMiddle("testing")); // ➞ "t"
 console.log(getMiddle("middle")); // ➞ "dd"
